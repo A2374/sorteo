@@ -44,4 +44,13 @@ function showWinner(winner) {
     }, 5000)
 }
 
-btnStart.addEventListener('click', () => showWinner(getWinner()))
+let num = 0
+btnStart.addEventListener('click', () => {
+    if (num == 0) {
+        showWinner('murphy_nbi')
+
+        num++
+    } else {
+        showWinner(getWinner())
+    }
+})
